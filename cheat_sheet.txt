@@ -19,6 +19,7 @@ python -m wyoming_faster_whisper `
 
 
 **********
+RUN AS A WINDOWS DAEMON/SERVICE USING NSSM:
 nssm install HA_STT C:\Users\john\Projects\ha-stt-wyoming\run_stt.cmd
 nssm set HA_STT AppDirectory C:\Users\john\Projects\ha-stt-wyoming
 nssm set HA_STT Start SERVICE_AUTO_START
