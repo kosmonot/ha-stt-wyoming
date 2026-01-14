@@ -27,3 +27,13 @@ nssm set HA_STT Start SERVICE_AUTO_START
 
  Stop-Process -Name python -Force
  PS C:\Users\john\Projects\ha-stt-wyoming\logs> Get-Content .\stderr.log -Tail 50 -Wait
+
+ Update procedure:
+ cd C:\Users\john\Projects\ha-stt-wyoming
+.\venv\Scripts\activate
+pip list --outdated
+
+pip install -U wyoming-faster-whisper faster-whisper ctranslate2
+
+deactivate
+nssm restart HA_STT
