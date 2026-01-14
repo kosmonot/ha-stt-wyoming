@@ -1,3 +1,5 @@
+Local faster-whisper (GPU) STT service for Home Assistant, run via NSSM on Win11.
+
 .\venv\Scripts\activate
 
 START WYOMING SERVER
@@ -24,3 +26,4 @@ nssm set HA_STT Start SERVICE_AUTO_START
 *****************
 
  Stop-Process -Name python -Force
+ PS C:\Users\john\Projects\ha-stt-wyoming\logs> Get-Content .\stderr.log -Tail 50 -Wait
