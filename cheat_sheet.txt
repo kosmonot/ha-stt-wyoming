@@ -1,0 +1,26 @@
+.\venv\Scripts\activate
+
+START WYOMING SERVER
+
+cd C:\Users\john\Projects\ha-stt-wyoming
+.\venv\Scripts\activate
+
+mkdir .\data -Force
+
+python -m wyoming_faster_whisper `
+  --uri "tcp://0.0.0.0:10300" `
+  --language en `
+  --model medium `
+  --device cuda `
+  --data-dir ".\data" `
+  --download-dir ".\data"
+
+
+**********
+nssm install HA_STT C:\Users\john\Projects\ha-stt-wyoming\run_stt.cmd
+nssm set HA_STT AppDirectory C:\Users\john\Projects\ha-stt-wyoming
+nssm set HA_STT Start SERVICE_AUTO_START
+
+*****************
+
+ Stop-Process -Name python -Force

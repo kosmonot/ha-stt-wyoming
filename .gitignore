@@ -1,0 +1,39 @@
+# Virtual environments
+venv/
+.venv/
+ENV/
+env/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.so
+
+# Editor settings
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Logs and misc cruft
+logs/
+*.log
+
+# Data dir (models)
+data/
+
+# Snapshot/media files (important)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+
+# Secrets and config
+.env
+*.env
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
