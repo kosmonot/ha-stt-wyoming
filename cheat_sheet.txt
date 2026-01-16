@@ -24,6 +24,10 @@ nssm install HA_STT C:\Users\john\Projects\ha-stt-wyoming\run_stt.cmd
 nssm set HA_STT AppDirectory C:\Users\john\Projects\ha-stt-wyoming
 nssm set HA_STT Start SERVICE_AUTO_START
 
+nssm status HA_STT
+nssm stop HA_STT
+NSSM restart HA_STT
+
 *****************
 
  Stop-Process -Name python -Force
